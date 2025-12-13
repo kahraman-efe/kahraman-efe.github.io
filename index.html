@@ -4,81 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Efe Erden - Kişisel Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #222;
+      background: #f5f5f5;
     }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 30px;
-      text-align: center;
-    }
-    section {
-      max-width: 900px;
-      margin: 40px auto;
+    .section-box {
       background: white;
       padding: 30px;
-      border-radius: 12px;
+      border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #333;
-      border-left: 5px solid #222;
-      padding-left: 10px;
-    }
-    ul {
-      line-height: 1.8;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #555;
+      margin-bottom: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Efe Erden</h1>
-    <p>Yazılım Geliştirici • Bilgisayar Mühendisliği Öğrencisi</p>
-  </header>
 
-  <section>
-    <h2>Hakkımda</h2>
-    <p>Merhaba! Ben Efe. Yazılım geliştirme, oyun geliştirme ve web teknolojileriyle ilgileniyorum. Kendimi sürekli geliştirmek için yeni teknolojiler öğreniyorum.</p>
-  </section>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Efe Erden</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hakkimda">Hakkımda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#yazilim">Yazılım Dilleri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projeler">Projeler</a></li>
+          <li class="nav-item"><a class="nav-link" href="#iletisim">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <section>
-    <h2>Bildigim Yazılım Dilleri</h2>
-    <ul>
-      <li>C# (Unity Game Development)</li>
-      <li>Python</li>
-      <li>JavaScript</li>
-      <li>HTML & CSS</li>
-      <li>SQL</li>
-    </ul>
-  </section>
+  <div class="container mt-5">
 
-  <section>
-    <h2>Projeler & Aktiviteler</h2>
-    <ul>
-      <li>Unity ile Mobil Oyunlar Geliştirme</li>
-      <li>Web Siteleri Tasarlama</li>
-      <li>Udemy & YouTube üzerinden eğitimler tamamlama</li>
-      <li>GitHub üzerinde projeler yayınlama</li>
-    </ul>
-  </section>
+    <!-- HAKKIMDA -->
+    <div id="hakkimda" class="section-box">
+      <h2 class="fw-bold mb-3">Hakkımda</h2>
+      <p>Merhaba! Ben Efe. Bilgisayar mühendisliği öğrencisiyim ve yazılım geliştirme, oyun geliştirme (Unity + C#) ve web teknolojileriyle ilgileniyorum.</p>
+    </div>
 
-  <section>
-    <h2>İletişim</h2>
-    <p>Email: efe@example.com</p>
-  </section>
+    <!-- YAZILIM DİLLERİ -->
+    <div id="yazilim" class="section-box">
+      <h2 class="fw-bold mb-3">Bildigim Yazılım Dilleri</h2>
+      <ul>
+        <li>C# (Unity Game Development)</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>HTML & CSS</li>
+        <li>SQL</li>
+      </ul>
+    </div>
 
-  <footer>
-    <p>© 2025 Efe Erden</p>
+    <!-- PROJELER -->
+    <div id="projeler" class="section-box">
+      <h2 class="fw-bold mb-3">Projeler & Aktiviteler</h2>
+      <ul>
+        <li>Unity ile mobil oyun geliştirme</li>
+        <li>Kişisel web siteleri oluşturma</li>
+        <li>GitHub üzerinde projeler yayınlama</li>
+        <li>Udemy & YouTube eğitimleri tamamlama</li>
+      </ul>
+    </div>
+
+    <!-- İLETİŞİM -->
+    <div id="iletisim" class="section-box">
+      <h2 class="fw-bold mb-3">İletişim</h2>
+      <p>Email: efe@example.com</p>
+      <button class="btn btn-dark" onclick="darkMode()">Dark Mode</button>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 text-muted">
+    © 2025 Efe Erden
   </footer>
+
+  <!-- JavaScript (Bootstrap + Custom) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function darkMode() {
+      document.body.classList.toggle("bg-dark");
+      document.body.classList.toggle("text-white");
+    }
+  </script>
+
 </body>
 </html>
